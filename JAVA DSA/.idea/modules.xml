@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Bit Manipulation/Bit Manipulation.iml" filepath="$PROJECT_DIR$/Bit Manipulation/Bit Manipulation.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/JAVA DSA.iml" filepath="$PROJECT_DIR$/.idea/JAVA DSA.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Maths for DSA/Maths for DSA.iml" filepath="$PROJECT_DIR$/Maths for DSA/Maths for DSA.iml" />
       <module fileurl="file://$PROJECT_DIR$/Pattern/Pattern.iml" filepath="$PROJECT_DIR$/Pattern/Pattern.iml" />
       <module fileurl="file://$PROJECT_DIR$/Recursion/Recursion.iml" filepath="$PROJECT_DIR$/Recursion/Recursion.iml" />
       <module fileurl="file://$PROJECT_DIR$/Searching/Searching.iml" filepath="$PROJECT_DIR$/Searching/Searching.iml" />
