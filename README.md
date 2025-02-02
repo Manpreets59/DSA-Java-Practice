@@ -4,7 +4,8 @@
 Checkout master branch if you are interested in theory
 
 
-# Complete Git & GitHub Course
+# Syllabus 
+# Complete Git & GitHub 
 
 ## Introduction to Programming
 - Types of languages
