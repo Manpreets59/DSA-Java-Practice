@@ -19,6 +19,8 @@ public class Subset {
         }
         char ch = up.charAt(0);
 
+        // now make two call for the String abc
+        // in which you can add the first character of unprocessed in processed and ignore the first character of unprocessed .
         subseq(p, up.substring(1));
         subseq(p+ch, up.substring(1));
     }
