@@ -1,7 +1,7 @@
 // Permutation and combination
 // subset-> non-adjacent collection
 // Recursion and iteration
-// .
+// This pattern of Taking some elements and removing some is know as subset pattern  .
 
 import java.util.ArrayList;
 
