@@ -13,7 +13,7 @@ public class Stream {
 
         char ch = up.charAt(0);
         if(ch == 'a'){
-            skip(p, up.substring(1));
+            skip(p, up.substring(1));   // substring remove the first character and create new string
         }
         else{
             skip(p+ch, up.substring(1));
@@ -44,5 +44,4 @@ public class Stream {
             return up.charAt(0) + skipappnotApple(up.substring(1)); // Append valid characters
         }
     }
-
 }
