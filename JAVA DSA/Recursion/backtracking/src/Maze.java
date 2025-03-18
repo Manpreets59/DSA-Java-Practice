@@ -10,10 +10,11 @@ public class Maze {
 //        System.out.println(pathRetDiagonal("" , 3 , 3));
         boolean[][] board = {
                 {true, true, true},
-                {true, false, true},
+                {true, true, true},
                 {true, true, true}
         };
-        pathRestriction("", board, 0,0);
+//        pathRestriction("", board, 0,0);
+//        allPath("", board, 0,0);
     }
 
     static int count(int r, int c){
@@ -97,6 +98,33 @@ public class Maze {
         }
         if(c<maze[0].length-1){
             pathRestriction(p+'R' ,maze, r , c+1 );
+        }
+    }
+
+
+    //moving in all direction up, down, left, right
+    //This is an example of endless recursion where we get into same position from where we started   .
+    static void allPath(String p,boolean[][] maze, int r, int c){
+        if(r==maze.length-1 && c==maze[0].length-1){
+            System.out.println(p);
+            return;
+        }
+
+        if(!maze[r][c]){
+            return;
+        }
+
+        if(r<maze.length-1){
+            allPath(p + 'D' ,maze, r+1 , c);
+        }
+        if(c<maze[0].length-1){
+            allPath(p+'R' ,maze, r , c+1 );
+        }
+        if(r>0){
+            allPath(p+'U' ,maze, r-1 , c );
+        }
+        if(c>0){
+            allPath(p+'R' ,maze, r , c-1 );
         }
     }
 }
