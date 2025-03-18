@@ -81,6 +81,7 @@ public class Maze {
         return list ;
     }
 
+    // with a restriction in path
     static void pathRestriction(String p,boolean[][] maze, int r, int c){
         if(r==maze.length-1 && c==maze[0].length-1){
             System.out.println(p);
