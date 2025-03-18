@@ -103,8 +103,12 @@ public class Maze {
 
 
     //moving in all direction up, down, left, right
-    //This is an example of endless recursion where we get into same position from where we started   .
-    static void allPath(String p,boolean[][] maze, int r, int c){
+    //This is an example of endless recursion where we get into same position from where we started
+    // Solution all cells that are visited mark those as false so that we don't get there
+    // Marking false mean I have that cell in my current path so when that path is over you are in another recursion
+    // call these cells should not be false .while when you go back (return) you make these false as true. When you come out of the
+    // recursive function you can make changes mark it as true.
+    static void allPath1(String p,boolean[][] maze, int r, int c){
         if(r==maze.length-1 && c==maze[0].length-1){
             System.out.println(p);
             return;
@@ -115,16 +119,50 @@ public class Maze {
         }
 
         if(r<maze.length-1){
-            allPath(p + 'D' ,maze, r+1 , c);
+            allPath1(p + 'D' ,maze, r+1 , c);
         }
         if(c<maze[0].length-1){
-            allPath(p+'R' ,maze, r , c+1 );
+            allPath1(p+'R' ,maze, r , c+1 );
         }
         if(r>0){
-            allPath(p+'U' ,maze, r-1 , c );
+            allPath1(p+'U' ,maze, r-1 , c );
         }
         if(c>0){
-            allPath(p+'R' ,maze, r , c-1 );
+            allPath1(p+'R' ,maze, r , c-1 );
         }
+    }
+    //what is backtracking ?
+    // when you come out of recursive function and you are now in above recursive call hence remark the cell as true is know as
+    // backtracking in simple it is what would be my array if i have not taken this path .
+
+    static void allPath(String p,boolean[][] maze, int r, int c) {
+        if (r == maze.length - 1 && c == maze[0].length - 1) {
+            System.out.println(p);
+            return;
+        }
+
+        if (!maze[r][c]) {
+            return;
+        }
+
+        //I am considering this block in my path as false
+        maze[r][c] = false;
+
+        if (r < maze.length - 1) {
+            allPath(p + 'D', maze, r + 1, c);
+        }
+        if (c < maze[0].length - 1) {
+            allPath(p + 'R', maze, r, c + 1);
+        }
+        if (r > 0) {
+            allPath(p + 'U', maze, r - 1, c);
+        }
+        if (c > 0) {
+            allPath(p + 'R', maze, r, c - 1);
+        }
+
+        // This line is where the function will be over so before the function get removed also removed the changes
+        // that were made by that function
+        maze[r][c] = true;
     }
 }
