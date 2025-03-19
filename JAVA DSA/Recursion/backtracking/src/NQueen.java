@@ -5,7 +5,7 @@ public class NQueen {
     public static void main(String[] args) {
         int n = 4;
         boolean[][] board = new boolean[n][n];
-        queens(board, 0);
+        System.out.println(queens(board, 0));
     }
 
     static int queens(boolean[][] board, int row){
@@ -69,3 +69,7 @@ public class NQueen {
         System.out.println();
     }
 }
+
+
+// Time complexity
+//T(N) = N * T(N - 1) + O(N^2) = O(N^3 + N factorial) = O(N factorial).
