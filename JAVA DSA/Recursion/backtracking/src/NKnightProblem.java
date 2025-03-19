@@ -80,3 +80,5 @@ public class NKnightProblem {
         System.out.println();
     }
 }
+
+// when a choice can effect future answer use backtracking
