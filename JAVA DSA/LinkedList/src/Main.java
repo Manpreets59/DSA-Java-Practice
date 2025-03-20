@@ -14,6 +14,8 @@ public class Main {
 
         list.insert(100, 3);
         list.display();
+        System.out.println(list.deleteFirst() + " Is deleted ");
+        list.display();
 
     }
 }
