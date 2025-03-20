@@ -19,5 +19,7 @@ public class Main {
         System.out.println(list.deleteLast() + " Is deleted");
         list.display();
 
+        System.out.println(list.delete(3) + " is deleted element at index 3");
+        list.display();
     }
 }
