@@ -25,14 +25,23 @@ public class Main {
 //        list.display();
 
 //        Double Linked List
-        DLL list = new DLL();
-        list.insertFirst(3);
-        list.insertFirst(5);
-        list.insertFirst(15);
-        list.display();
-        list.insertLast(99);
-        list.display();
-        list.insert(5, 55);
+//        DLL list = new DLL();
+//        list.insertFirst(3);
+//        list.insertFirst(5);
+//        list.insertFirst(15);
+//        list.display();
+//        list.insertLast(99);
+//        list.display();
+//        list.insert(5, 55);
+//        list.display();
+
+
+//        Circular LinkedList
+        CLL list = new CLL();
+        list.insert(23);
+        list.insert(45);
+        list.insert(5);
+        list.insert(12);
         list.display();
     }
 }
