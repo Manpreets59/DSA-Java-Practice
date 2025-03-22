@@ -43,5 +43,7 @@ public class Main {
         list.insert(5);
         list.insert(12);
         list.display();
+        list.delete(45);
+        list.display();
     }
 }
