@@ -159,6 +159,30 @@ public class LL {
         return ans;
     }
 
+    // Calculate the length of cyclic linkedlist
+//    public int lengthCycle(ListNode headd){
+//        ListNode fast = head;
+//        ListNode slow = head;
+//
+//        while(fast != null && fast.next != null){
+//            fast = fast.next.next;
+//            slow = slow.next;
+//            if(fast == slow){
+//                // Calculate the lenght
+//                ListNode temp = slow;
+//                int lenght = 0;
+//                do{
+//                    temp = temp.next;
+//                    lenght++;
+//                }while(temp != slow){
+//                    return lenght;
+//                }
+//                return lenght;
+//            }
+//
+//        }
+//    }
+
 
     public void display(){
         Node temp = head;
