@@ -25,6 +25,16 @@ public class CustomStack {
         return true;
     }
 
+    public int pop() throws Exception {
+        if(isEmpty()){
+            throw new Exception("Cannot pop from an empty stack!!");
+        }
+//        int removed = data[ptr];
+//        ptr--;
+//        return removed;
+        return data[ptr--];
+    }
+
     private boolean isFull() {
         return ptr == data.length-1;// pointer is at last index
     }
