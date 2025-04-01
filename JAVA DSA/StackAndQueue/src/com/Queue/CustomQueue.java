@@ -42,6 +42,21 @@ public class CustomQueue {
         }
         return removed;
     }
+    // complexity is O(N) for removing element
 
+    public int front() throws Exception{
+        if(isEmpty()){
+            throw new Exception("Queue is Empty");
+        }
+        return data[0];
+    }
 
+    public void display(){
+        for(int i =0; i< end;i++){
+            System.out.print(data[i] + " ");
+        }
+        System.out.println("<- END");
+    }
 }
+
+
