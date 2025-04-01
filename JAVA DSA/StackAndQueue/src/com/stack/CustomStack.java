@@ -25,9 +25,9 @@ public class CustomStack {
         return true;
     }
 
-    public int pop() throws Exception {
+    public int pop() throws StackException {
         if(isEmpty()){
-            throw new Exception("Cannot pop from an empty stack!!");
+            throw new StackException("Cannot pop from an empty stack!!");
         }
 //        int removed = data[ptr];
 //        ptr--;
@@ -35,19 +35,18 @@ public class CustomStack {
         return data[ptr--];
     }
 
-    public int peek() throws Exception {
+    public int peek() throws StackException {
         if(isEmpty()){
-            throw new Exception("Cannot peek from an empty Stack!!")
+            throw new StackException("Cannot peek from an empty Stack!!");
         }
         return data[ptr];
     }
 
-    private boolean isFull() {
+    public boolean isFull() {
         return ptr == data.length-1;// pointer is at last index
     }
 
-    private boolean isEmpty(){
+    public boolean isEmpty(){
         return ptr == -1; // pointer is at -1 index no element exist
     }
-
 }
