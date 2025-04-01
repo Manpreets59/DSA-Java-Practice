@@ -15,4 +15,22 @@ public class CustomStack {
         this.data = new int[size];
     }
 
+    public boolean push(int item){
+        if(isFull()){
+            System.out.println("stack is full");
+            return false;
+        }
+        ptr++;
+        data[ptr] = item;
+        return true;
+    }
+
+    private boolean isFull() {
+        return ptr == data.length-1;// pointer is at last index
+    }
+
+    private boolean isEmpty(){
+        return ptr == -1; // pointer is at -1 index no element exist
+    }
+
 }
