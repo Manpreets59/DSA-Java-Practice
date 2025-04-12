@@ -58,10 +58,29 @@ public class Binary {
         display(node.right, indent + "\t");
     }
 
-    public static void main (String[] args){
-        Scanner scanner = new Scanner(System.in);
-        Binary tree = new Binary();
-        tree.populate(scanner);
-        tree.display();
+//    public static void main (String[] args){
+//        Scanner scanner = new Scanner(System.in);
+//        Binary tree = new Binary();
+//        tree.populate(scanner);
+//        tree.display();
+//    }
+
+    public void preetyDisplay(){
+        preetyDisplay(root,0);
+    }
+    private void preetyDisplay(Node node, int level){
+        if(node== null){
+            return;
+        }
+        preetyDisplay(node.right, level +1);
+        if(level != 0){
+            for(int i =0; i< level-1; i++){
+                System.out.print("|\t\t");
+            }
+            System.out.println("|------>" + node.value);
+        }else{
+            System.out.println(node.value);
+        }
+        preetyDisplay(node.left, level+1);
     }
 }
