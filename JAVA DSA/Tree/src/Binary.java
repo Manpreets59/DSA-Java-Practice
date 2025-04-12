@@ -1,7 +1,6 @@
 import java.util.Scanner;
 
 public class Binary {
-    private Node root;
 
     public Binary(){
 
@@ -12,9 +11,11 @@ public class Binary {
         Node left;
         Node right;
 
-    public Node(int value){
+     public Node(int value){
         this.value = value;
-    }}
+     }
+    }
+    private Node root;
 
     // insert elements
     public void populate(Scanner scanner){
@@ -45,4 +46,22 @@ public class Binary {
         }
     }
 
+    public void display(){
+        display(root, "");
+    }
+    private  void display(Node node, String indent){
+        if(node == null){
+            return;
+        }
+        System.out.println(indent + node.value);
+        display(node.left, indent + "\t");
+        display(node.right, indent + "\t");
+    }
+
+    public static void main (String[] args){
+        Scanner scanner = new Scanner(System.in);
+        Binary tree = new Binary();
+        tree.populate(scanner);
+        tree.display();
+    }
 }
