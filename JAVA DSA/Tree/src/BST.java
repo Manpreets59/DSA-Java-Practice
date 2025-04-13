@@ -67,6 +67,7 @@ public class BST {
         populateSorted(nums, start, mid);
         populateSorted(nums, mid+1, end);
     }
+    // complexity nlog(n) as it insert n element and each element take log(n) complexity.
 
     public boolean balanced(Node node){
         if(node == null){
@@ -88,3 +89,11 @@ public class BST {
         display(node.right, "Left Right of " + node.value + " : ");
     }
 }
+
+// Tree traversals, Inorder, postorder, preorder
+//   node, left, right used for evaluation maths expression or making a copy
+// Inorder   left, node, right  print node in sorted manner for binary search tree
+// postorder left, right, node when delete the binary tree , bottom up calculation .
+
+// BFS & DFS  or BFT & DFT
+// .
