@@ -2,11 +2,17 @@ import java.util.Scanner;
 
 public class Main {
     public static void main (String[] args){
-        Scanner scanner = new Scanner(System.in);
-        Binary tree = new Binary();
-        tree.populate(scanner);
-//        tree.display();
-        tree.preetyDisplay();
+//        Scanner scanner = new Scanner(System.in);
+//        Binary tree = new Binary();
+//        tree.populate(scanner);
+////        tree.display();
+//        tree.preetyDisplay();
+
+//        BinarySearchTree BST
+        BST tree = new BST();
+        int[] nums = {5,3,9,7,8,10};
+        tree.populate(nums);
+        tree.display();
     }
 }
 
