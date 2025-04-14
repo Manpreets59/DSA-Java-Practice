@@ -9,10 +9,18 @@ public class Main {
 //        tree.preetyDisplay();
 
 //        BinarySearchTree BST
-        BST tree = new BST();
-        int[] nums = {5,3,9,7,8,10};
-        tree.populate(nums);
-        tree.display();
+//        BST tree = new BST();
+//        int[] nums = {5,3,9,7,8,10};
+//        tree.populate(nums);
+//        tree.display();
+
+//        AVL Tree
+        AVL tree = new AVL();
+
+        for(int i =0; i<1000; i++){
+            tree.insert(i);
+        }
+        System.out.println(tree.height());
     }
 }
 
