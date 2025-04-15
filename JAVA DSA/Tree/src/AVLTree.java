@@ -13,6 +13,10 @@
 //  complexity = O(log(n)) + O(1) = O(log(n))
 
 class AVL {
+    public boolean height() {
+        return false;
+    }
+
     public class Node{
         private int value;
         private int height;
