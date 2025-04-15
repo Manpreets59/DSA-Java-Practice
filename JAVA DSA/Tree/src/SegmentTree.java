@@ -87,6 +87,22 @@ public class SegmentTree {
         }
         if(node.right != null){
             display(node.right);
+        }}
+
+        // Query
+        public int query(int qsi, int qei){
+            return this.query(this.root, qsi, qei);
         }
+        private int query(Node node, int qsi , int qei){
+            if(node.startInterval >= qsi && node.endInterval <= qei){
+                // node is completely lying inside query
+                return node.data;
+            } else if (node.startInterval > qei || node.endInterval < qsi) {
+                // completely outside
+                return 0;
+            }else {
+                return this.query(node.left, qsi, qei) + this.query(node.right, qsi, qei);
+            }
+
     }
 }
