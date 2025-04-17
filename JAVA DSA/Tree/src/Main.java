@@ -45,19 +45,20 @@ public class Main {
 // Types
 // complete binary tree all levels are full and last level full from left ot right
 // full / strict binary tree: Each node has either zero children or two children used in compression, segment tree
-// perfect binary tree: all the internal node have two children or zero childrean and all leafnode is at same level
-// Height balance Binary tree Average height of P(logn)
+// perfect binary tree: all the internal node have two children and all leafnode is at same level
+// Height balance Binary tree Average height of O(logn)
 // Skeded binary tree Every node has only one child
 // ordered binary tree every node have some properties  example binary search tree
 
 // properties that help you in some question
 // perfect binary tree
 //  tree height=h
+// height at level n is 2^n
 // total nodes = 2^(h+1) -1
 // if height is h then total no of leafnode is 2^h
 // all the nodes without leafnode = 2^(h+1) -1 - 2^h = 2^h -1
-// if n = number of leavenode then we have log n+1 level atleast
-// if we have n number of nodes then the minimum height levels is log n+1
+// if n = number of leavenode then we have log(n+1) level atleast
+// if we have n number of nodes then the minimum height levels is log( n+1)
 
 // Strict binary tree
 // leafnode = n then inter node except leafnode is n - 1
