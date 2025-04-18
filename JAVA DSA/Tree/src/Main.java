@@ -61,7 +61,7 @@ public class Main {
 // if we have n number of nodes then the minimum height levels is log( n+1)
 
 // Strict binary tree
-// leafnode = n then inter node except leafnode is n - 1
+// leafnode = n then inter node except leafnode is n - 1       n (leaf node) = n-1 (internal)
 // no of leafnode = no of internal node +1
 // understand by creating tree or through induction proof
 // no of leafnode = 1 + no of internal node with two children apart from the root node

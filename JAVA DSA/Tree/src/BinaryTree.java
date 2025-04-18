@@ -1,8 +1,8 @@
 import java.util.Scanner;
 
-public class Binary {
+public class BinaryTree {
 
-    public Binary(){
+    public BinaryTree(){
 
     }
 
