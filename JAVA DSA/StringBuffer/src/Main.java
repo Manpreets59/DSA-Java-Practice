@@ -5,11 +5,13 @@
 // Thread safe and it make it slow as it work on different processes whereas string builder is not thread safe
 //  .
 
+import java.util.Random;
 public class Main {
     public static void main(String[] args) {
 
         // constructor 1
         StringBuffer sb = new StringBuffer();
+        System.out.println(sb.capacity());
 
         // constructor 2
         StringBuffer sb2 = new StringBuffer("Manpreet ");
@@ -27,5 +29,13 @@ public class Main {
 
         String str = sb.toString();
         System.out.println(str);
+
+//        Random random = new Random();
+//        System.out.println(random.nextFloat());
+//
+//        System.out.println((char) (97));
+        int n = 20;
+        String name = RandomString.generate(n);
+        System.out.println(name);
     }
 }
