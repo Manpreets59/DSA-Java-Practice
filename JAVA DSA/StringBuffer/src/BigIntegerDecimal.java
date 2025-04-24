@@ -27,6 +27,7 @@ public class BigIntegerDecimal {
         System.out.println(s);
         System.out.println(d);
         System.out.println(c);
+        System.out.println(factorial.fact(5000));
     }
 }
 
