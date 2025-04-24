@@ -5,6 +5,8 @@
 // Thread safe and it make it slow as it work on different processes whereas string builder is not thread safe
 //  .
 
+import java.text.DecimalFormat;
+import java.util.Arrays;
 import java.util.Random;
 public class Main {
     public static void main(String[] args) {
@@ -37,5 +39,20 @@ public class Main {
         int n = 20;
         String name = RandomString.generate(n);
         System.out.println(name);
+
+        // Remove white spaces
+        String sentence = "H A R M O L";
+        System.out.println(sentence);
+
+        System.out.println(sentence.replaceAll("\\S", ""));
+
+        //split
+        String arr = "man van kan ";
+        String[] names = arr.split(" ");
+        System.out.println(Arrays.toString(names));
+
+        //Rounding off
+        DecimalFormat df = new DecimalFormat("0.000");
+        System.out.println(df.format(7.2));
     }
 }
