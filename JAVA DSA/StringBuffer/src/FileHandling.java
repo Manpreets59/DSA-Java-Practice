@@ -81,5 +81,12 @@ public class FileHandling {
         catch(IOException e){
             System.out.println(e.getMessage());
         }
+
+        try( BufferedWriter bw = new BufferedWriter(new FileWriter("note.txt"))){
+             bw.write("This should be append");
+        }
+        catch(IOException e){
+            System.out.println(e.getMessage());
+        }
     }
 }
