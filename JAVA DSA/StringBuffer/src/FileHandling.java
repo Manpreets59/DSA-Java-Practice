@@ -6,8 +6,10 @@
 // Byte Stream                 and        Character Stream
 // .
 
+import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
 
 public class FileHandling {
     public static void main(String[] args) {
@@ -34,6 +36,25 @@ public class FileHandling {
 //            fr.close();
             System.out.println();
         }catch (IOException e){
+            System.out.println(e.getMessage());
+        }
+
+//Byte to char stream and reading char stream
+        try (BufferedReader br = new BufferedReader(new InputStreamReader(System.in))){
+            System.out.println(("You typed: " + br.readLine()));
+        }
+        catch (IOException e){
+            System.out.println(e.getMessage());
+        }
+
+
+        try (BufferedReader br = new BufferedReader(new FileReader("note.txt"))){
+            while (br.ready()){
+                br.readLine();
+            }
+            System.out.println(("You typed: " + br.readLine()));
+        }
+        catch (IOException e){
             System.out.println(e.getMessage());
         }
     }
