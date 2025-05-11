@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Bit Manipulation/Bit Manipulation.iml" filepath="$PROJECT_DIR$/Bit Manipulation/Bit Manipulation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Heaps/Heaps.iml" filepath="$PROJECT_DIR$/Heaps/Heaps.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/JAVA DSA.iml" filepath="$PROJECT_DIR$/.idea/JAVA DSA.iml" />
       <module fileurl="file://$PROJECT_DIR$/LinkedList/LinkedList.iml" filepath="$PROJECT_DIR$/LinkedList/LinkedList.iml" />
       <module fileurl="file://$PROJECT_DIR$/Maths for DSA/Maths for DSA.iml" filepath="$PROJECT_DIR$/Maths for DSA/Maths for DSA.iml" />
