@@ -10,7 +10,11 @@
 // Upheap method complexity  O(logn)
 // Heapdown method complexity O(logn).
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception{
         Heap<Integer> heap = new Heap<>();
+        heap.insert(34);
+        heap.insert(54);
+        heap.insert(21);
+        System.out.println(heap.remove());
     }
 }
