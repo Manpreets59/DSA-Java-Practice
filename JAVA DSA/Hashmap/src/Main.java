@@ -34,30 +34,40 @@ import java.util.TreeMap;
 
 public class Main {
     public static void main(String[] args) {
-        HashMap<String, Integer> map = new HashMap<>();
-        map.put("kunal", 89);
-        map.put("manpreet", 99);
-        map.put("kamal", 91);
-        System.out.println(map.get("kamal"));
-        System.out.println(map.getOrDefault("kalam",81));
-        System.out.println(map.containsKey("kamal"));
+//        HashMap<String, Integer> map = new HashMap<>();
+//        map.put("kunal", 89);
+//        map.put("manpreet", 99);
+//        map.put("kamal", 91);
+//        System.out.println(map.get("kamal"));
+//        System.out.println(map.getOrDefault("kalam",81));
+//        System.out.println(map.containsKey("kamal"));
+//
+//        HashSet<Integer> set = new HashSet<>();
+//        set.add(59);
+//        set.add(61);
+//        set.add(91);
+//        set.add(2);
+//        set.add(96);
+//        set.add(59);
+//        System.out.println(set);
+//
+//        TreeMap<String, Integer> tree = new TreeMap<>();    //internally it is different but the way we are using it is same
+//        map.put("kunal", 89);
+//        map.put("manpreet", 99);
+//        map.put("kamal", 91);
+//        System.out.println(map.get("kamal"));
+//        System.out.println(map.getOrDefault("kalam",81));
+//        System.out.println(map.containsKey("kamal"));
 
-        HashSet<Integer> set = new HashSet<>();
-        set.add(59);
-        set.add(61);
-        set.add(91);
-        set.add(2);
-        set.add(96);
-        set.add(59);
-        System.out.println(set);
+        MapUsingHash map = new MapUsingHash();
+        map.put("Mango", "king of fruits");
+        map.put("Apple", "A sweet red fruit");
 
-        TreeMap<String, Integer> tree = new TreeMap<>();    //internally it is different but the way we are using it is same
-        map.put("kunal", 89);
-        map.put("manpreet", 99);
-        map.put("kamal", 91);
-        System.out.println(map.get("kamal"));
-        System.out.println(map.getOrDefault("kalam",81));
-        System.out.println(map.containsKey("kamal"));
+        System.out.println("Mango: " + map.get("Mango")); // king of fruits
+        System.out.println("Apple: " + map.get("Apple")); // A sweet red fruit
+
+        map.remove("Mango");
+        System.out.println("Mango after remove: " + map.get("Mango")); // null
     }
 }
 // hashmap is not safe because it can't be used between multiple threads without proper synchronous tool
